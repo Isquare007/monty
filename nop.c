@@ -1,13 +1,12 @@
 #include "monty.h"
-
 /**
- * _nop - nop top of stack
- * @stack: pointer to lists for monty stack
- * @line_number: number of line opcode occurs
+  *f_nop- nothing
+  *@head: stack head
+  *@counter: line_number
+  *Return: no return
  */
-
-void _nop(__attribute__ ((unused))stack_t **stack,
-		__attribute__ ((unused)) unsigned int line_number)
+void f_nop(stack_t **head, unsigned int counter)
 {
-	;
+	(void) counter;
+	(void) head;
 }

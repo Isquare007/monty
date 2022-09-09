@@ -1,22 +1,23 @@
 #include "monty.h"
-
 /**
- * _pop - remove element a list
- *@stack: pointer to first node
- *@line_number: integer
- *Return: void
- */
-void _pop(stack_t **stack, unsigned int line_number)
+ * f_pop - prints the top
+ * @head: stack head
+ * @counter: line_number
+ * Return: no return
+*/
+void f_pop(stack_t **head, unsigned int counter)
 {
-	stack_t *nodo = *stack;
+	stack_t *h;
 
-	if (stack == NULL || *stack == NULL)
+	if (*head == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	*stack = nodo->next;
-	if (*stack != NULL)
-		(*stack)->prev = NULL;
-	free(nodo);
+	h = *head;
+	*head = h->next;
+	free(h);
 }
