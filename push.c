@@ -5,7 +5,6 @@
  * @stack: the linked lists for monty stack
  * @line_number: number of line opcode occurs
  */
- 
 void _push(stack_t **stack, __attribute__ ((unused))unsigned int line_number)
 {
 	stack_t *top;
